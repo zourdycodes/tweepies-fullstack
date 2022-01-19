@@ -1,15 +1,17 @@
-import Link from 'next/link';
-import Layout from '../components/Layout';
+// import Link from 'next/link';
+import { Sidebar } from '../components/molecules/Sidebar';
+import { Feed } from '../components/organisms/Feed';
+import { Widgets } from '../components/organisms/Widgets';
+import Layout from '../components/templates/Layout';
 
 function IndexPage() {
   return (
-    <Layout title="Home | Next.js + TypeScript Example">
-      <h1>Hello Next.js 👋</h1>
-      <p>
-        <Link href="/about">
-          <a>About</a>
-        </Link>
-      </p>
+    <Layout title="Home | Tweepies">
+      <main className="bg-black min-h-screen flex max-w-[1500px] mx-auto">
+        <Sidebar />
+        <Feed />
+        <Widgets />
+      </main>
     </Layout>
   );
 }
