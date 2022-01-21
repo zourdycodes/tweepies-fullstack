@@ -27,7 +27,7 @@ export const Widgets: React.FC<Props> = ({ followResult, trendingResult }) => {
           <SearchIcon className="text-gray-500 h-5 z-50" />
           <input
             type="text"
-            className="bg-transparent placeholder-gray-600 outline-none text-[#d9d9d9] absolute focus:outline-none focus:border-none  pl-11 border border-transparent w-full focus:border-[#1d9bf0] rounded-full focus:bg-black focus:shadow-lg"
+            className="bg-transparent placeholder-gray-600 outline-none text-[#d9d9d9] absolute focus:outline-none focus:border-none pl-11 border border-transparent w-full rounded-full"
             placeholder="Search Twitter"
           />
         </div>
