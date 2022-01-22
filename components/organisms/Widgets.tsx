@@ -3,6 +3,7 @@ import { TrendingResult } from '@/types';
 import { Trending } from '@/molecules/Trending';
 import { SearchIcon } from '@heroicons/react/outline';
 import React from 'react';
+import { ImageGenerics } from '@/atoms/ImageGenerics';
 
 interface Props {
   trendingResult: TrendingResult[];
@@ -25,12 +26,46 @@ export const Widgets: React.FC<Props> = ({ followResult, trendingResult }) => {
 
       {/* TRENDING */}
       <div className="text-[#d9d9d9] space-y-3 bg-[#15181c] pt-2 rounded-xl w-11/12 xl:w-9/12">
-        <h4 className="font-bold text-xl px-4">
-          What's happening around you.'
-        </h4>
+        <h4 className="font-bold text-xl px-4">Trending around you.</h4>
         {trendingResult.map((result, index) => {
           return <Trending key={index} result={result} />;
         })}
+        <button className="hover:bg-white hover:bg-opacity-[0.03] px-4 py-3 cursor-pointer transition duration-200 ease-out flex items-center justify-between w-full text-[#1d9bf0] font-light">
+          Show more
+        </button>
+      </div>
+
+      {/* WHO TO FOLLOW WIDGET */}
+      <div className="text-[#d9d9d9] space-y-3 bg-[#15181c] pt-2 rounded-xl w-11/12 xl:w-9/12">
+        <h4 className="font-bold text-xl px-4">Who to follow.</h4>
+
+        {followResult.map((result, index) => {
+          return (
+            <div
+              key={index}
+              className="hover:bg-white hover:bg-opacity-[0.03] px-4 py-2 cursor-pointer transition duration-200 ease-out flex items-center group"
+            >
+              <ImageGenerics
+                src={result.userImg}
+                width={50}
+                height={50}
+                objectFit="cover"
+                className="rounded-full"
+                alt={result.username}
+              />
+              <div className="ml-4 leading-5 group">
+                <h4 className="font-bold group-hover:underline">
+                  {result.username}
+                </h4>
+                <h5 className="text-gray-500 text-[15px]">{result.tag}</h5>
+              </div>
+              <button className="ml-auto group-hover:bg-[#4a1369] bg-[#A020F0] text-white rounded-full font-bold text-sm py-1.5 px-3.5">
+                Follow
+              </button>
+            </div>
+          );
+        })}
+
         <button className="hover:bg-white hover:bg-opacity-[0.03] px-4 py-3 cursor-pointer transition duration-200 ease-out flex items-center justify-between w-full text-[#1d9bf0] font-light">
           Show more
         </button>
