@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { SparklesIcon } from '@heroicons/react/outline';
+import { AddPost } from '@/molecules/AddPost';
 
 export const Feed: React.FC = () => {
   return (
@@ -8,6 +9,8 @@ export const Feed: React.FC = () => {
         <h2 className="text-lg sm:text-xl font-bold">Home</h2>
         <SparklesIcon className="h-5 text-white" />
       </div>
+
+      <AddPost />
     </div>
   );
 };

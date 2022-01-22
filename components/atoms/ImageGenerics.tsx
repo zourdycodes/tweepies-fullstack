@@ -10,21 +10,21 @@ type Props = {
   width?: number | null;
   height?: number | null;
   objectFit?: string | any;
+  layout?: 'fixed' | 'fill' | 'intrinsic' | 'responsive' | any;
 };
 
-export const ImageGenerics: React.FC<Props> = (props) => {
-  const {
-    src,
-    alt,
-    onClick,
-    className,
-    ContainerClassName,
-    width,
-    height,
-    objectFit,
-    ...restProps
-  } = props;
-
+export const ImageGenerics: React.FC<Props> = ({
+  src,
+  alt,
+  onClick,
+  className,
+  ContainerClassName,
+  width,
+  height,
+  objectFit,
+  layout,
+  ...restProps
+}) => {
   return (
     <div
       className={ContainerClassName ? `${ContainerClassName} relative` : ''}
@@ -36,6 +36,7 @@ export const ImageGenerics: React.FC<Props> = (props) => {
         width={width && width}
         height={height && height}
         objectFit={objectFit && objectFit}
+        layout={layout && layout}
         className={className}
         {...restProps}
       />
