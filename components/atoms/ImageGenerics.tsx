@@ -7,16 +7,14 @@ type Props = {
   onClick?: () => void;
   className: string;
   extraStyle?: string;
-  width?: number;
-  height?: number;
 };
 
 export const ImageGenerics: React.FC<Props> = (props) => {
-  const { src, alt, onClick, className, extraStyle } = props;
+  const { src, alt, onClick, className, extraStyle, ...restProps } = props;
 
   return (
     <div className={`${className} relative`} onClick={onClick}>
-      <Image alt={alt} src={src} className={extraStyle} layout="fill" />
+      <Image alt={alt} src={src} className={extraStyle} {...restProps} />
     </div>
   );
 };
