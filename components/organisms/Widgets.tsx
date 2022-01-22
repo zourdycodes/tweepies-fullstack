@@ -1,18 +1,8 @@
+import { FollowResult } from '@/types';
+import { TrendingResult } from '@/types';
+import { Trending } from '@/molecules/Trending';
 import { SearchIcon } from '@heroicons/react/outline';
 import React from 'react';
-
-export type TrendingResult = {
-  heading: string;
-  description: string;
-  img: string;
-  tags: string[];
-};
-
-type FollowResult = {
-  userImg: string;
-  username: string;
-  tag: string;
-};
 
 interface Props {
   trendingResult: TrendingResult[];
@@ -31,6 +21,19 @@ export const Widgets: React.FC<Props> = ({ followResult, trendingResult }) => {
             placeholder="Search Twitter"
           />
         </div>
+      </div>
+
+      {/* TRENDING */}
+      <div className="text-[#d9d9d9] space-y-3 bg-[#15181c] pt-2 rounded-xl w-11/12 xl:w-9/12">
+        <h4 className="font-bold text-xl px-4">
+          What's happening around you.'
+        </h4>
+        {trendingResult.map((result, index) => {
+          return <Trending key={index} result={result} />;
+        })}
+        <button className="hover:bg-white hover:bg-opacity-[0.03] px-4 py-3 cursor-pointer transition duration-200 ease-out flex items-center justify-between w-full text-[#1d9bf0] font-light">
+          Show more
+        </button>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import { ImageGenerics } from '@/atoms/ImageGenerics';
-import { TrendingResult } from '@/organisms/Widgets';
+import { TrendingResult } from '@/types';
 import { DotsCircleHorizontalIcon } from '@heroicons/react/outline';
 import React from 'react';
 
