@@ -1,4 +1,28 @@
-# TypeScript Next.js example
+# Tweepies --> Tweeting application (on-development)
+
+## TODO <====> For Pull Request or the next development
+
+### TODO - Phase 1
+
+- [&check;] Setting up the application
+- [&check;] Configuring TypeScript incl. path mappings, eslint-typescript-plugin, and Configure Tailwind.
+- [&check;] Layouting the apps
+- [&check;] Create Sidebar
+- [&check;] Create Widgets
+- [&cross;] Create Input Component
+- [&cross;] Handling File Upload (File Reader API)
+
+### TODO - Phase 2
+
+- [&cross;] Setting up Prisma and PostgreSQL -> Modelling
+- [&cross;] Database Migration with Prisma V2
+- [&cross;] Setting up Next.js Server
+- [&cross;] Setting up Redux / Thunk as controller on the client side
+- [&cross;] Handling User Authorization with NextAuth
+- [&cross;] Handling Response and Request in the server for Posts Model
+- [&cross;] Controlling the create, send, and delete Posts in the server
+
+---
 
 This is a really simple project that shows the usage of Next.js with TypeScript.
 
