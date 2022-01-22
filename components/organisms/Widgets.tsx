@@ -1,7 +1,7 @@
 import { SearchIcon } from '@heroicons/react/outline';
 import React from 'react';
 
-type TrendingResult = {
+export type TrendingResult = {
   heading: string;
   description: string;
   img: string;
