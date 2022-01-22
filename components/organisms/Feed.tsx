@@ -1,5 +1,5 @@
+import * as React from 'react';
 import { SparklesIcon } from '@heroicons/react/outline';
-import React from 'react';
 
 export const Feed: React.FC = () => {
   return (
